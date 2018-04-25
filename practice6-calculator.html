@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>practice6-calculator</title>
+</head>
+<style>
+	body{ text-align:center}
+	#mycalculator{ margin:50px 0 0 0 ;}
+	input{ height:50px;}
+	select{ height:50px;}
+	button{ height:50px; width:50px;}
+</style>
+<script>
+	window.onload=function(){
+		var firstnum = document.getElementById("firstnum");
+		var secondnum = document.getElementById("secondnum");
+		var fuhao = document.getElementById("fuhao");
+		var result = document.getElementById("result");
+
+		}
+	function count(){
+		if(fuhao.value=='+'){
+			result.value = parseFloat(firstnum.value)+parseFloat(secondnum.value)
+			}
+		if(fuhao.value=='-'){
+			result.value = parseFloat(firstnum.value)-parseFloat(secondnum.value)
+			}
+		if(fuhao.value=='*'){
+			result.value = parseFloat(firstnum.value)*parseFloat(secondnum.value)
+			}
+		if(fuhao.value=='/'){
+			result.value = parseFloat(firstnum.value)/parseFloat(secondnum.value)
+			}
+		}
+
+</script>
+<body>
+	<div id="mycalculator">
+    	<input type="text" id="firstnum">
+        <select name="fuhao" id="fuhao">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        </select>
+        <input type="text" id="secondnum">
+        <button onClick="count()">=</button>
+        <input type="text" id="result">
+    </div>
+</body>
+</html>
