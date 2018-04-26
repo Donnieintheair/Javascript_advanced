@@ -13,11 +13,15 @@
 	
 	var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
 	var scoreArr = scoreStr.split(';');
+	var sum = 0;
 	for(var i=0;i<scoreArr.length;i++){
 		scoreArr[i] = parseInt(scoreArr[i].substring(3));
+		sum = sum+scoreArr[i];
 		}
-	document.write(scoreArr[0])
+	var average = Math.round(sum/scoreArr.length)
+	document.write('总分是：'+sum+'; 平均分（保留整数）是：'+average)
 </script>
+
 <body>
 </body>
 </html>
