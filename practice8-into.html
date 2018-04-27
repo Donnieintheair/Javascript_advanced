@@ -17,8 +17,12 @@
 		
 		}
 	function count(){
-			second.innerHTML = num;
 			num--;
+			if(num==0){
+				clearInterval(mymy)
+				}
+			second.innerHTML = num;
+			
 			}
 </script>
 
