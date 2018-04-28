@@ -7,7 +7,7 @@
 <style>
 </style>
 <script>
-	var num = 5;
+	var num = 3;
 	window.onload=function(){
 		var second = document.getElementById("second");
 		
@@ -18,18 +18,24 @@
 			num--;
 			if(num==0){
 				clearInterval(mymy)
+				window.open("http://www.baidu.com",target="_self")
 				}
 			second.innerHTML = num;
 			
 			}
 		}
+		
+		function back(){
+			window.history.back();
+			}
 	
 </script>
 
 <body>
 	<h1>操作成功！</h1>
-    <span id="second">5</span>
-    <span>秒后回到主页</span>
+    <span id="second">3</span>
+    <span>秒后回到hao123主页 </span><a href="javascript:back()">返回</a>
+    
 
 </body>
 </html>
