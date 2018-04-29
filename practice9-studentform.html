@@ -6,6 +6,7 @@
 </head>
 <style>
 body{ }
+#studentformdiv{ margin:0 auto;}
 #studentform{ border-collapse:collapse; width:604px; margin:0 auto; text-align:center;}
 #studentform tr th{ width:200px; border:1px solid black; height:50px; font-size:20px;}
 #studentform tr td{ width:200px; border:1px solid black; height:30px; }
@@ -23,16 +24,21 @@ body{ }
 				}
 			}		
 		}
-	
+		
+	//删除的函数
 	function delect(obj){
 		var tr = obj.parentNode.parentNode;
 		tr.parentNode.removeChild(tr);
 		}
-	
+		
+	//添加一行的函数
+	function add(){
+		
+		}
 </script>
 
 <body>
-	<div>
+	<div id="studentformdiv">
     	<form action="">
         	<table id="studentform">
             	<tr>
@@ -46,6 +52,7 @@ body{ }
                 	<td><a href="javascript:;" onClick="delect(this)">删除</a></td>
                 </tr>
             </table>
+            <input type="button" value="添加" onClick="add()">
         </form>
     </div>    
 
