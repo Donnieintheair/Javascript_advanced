@@ -33,7 +33,18 @@ body{ }
 		
 	//添加一行的函数
 	function add(){
-		
+		var table = document.getElementById("studentform");
+		var tr = document.createElement("tr");
+		var name = document.createElement("td");
+		name.innerHTML = prompt("请输入姓名：")
+		var num = document.createElement("td");
+		num.innerHTML = prompt("请输入学号：")
+		var del= document.createElement("td");
+		del.innerHTML = "<a href='javascript:;' onClick='delect(this)'>删除</a>";
+		tr.appendChild(name);
+		tr.appendChild(num);
+		tr.appendChild(del);
+		table.appendChild(tr);
 		}
 </script>
 
