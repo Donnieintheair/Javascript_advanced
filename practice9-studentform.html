@@ -6,14 +6,19 @@
 </head>
 <style>
 body{ }
-#studentformdiv{ margin:0 auto;}
+#studentformdiv{ margin:0 auto; width:604px;}
 #studentform{ border-collapse:collapse; width:604px; margin:0 auto; text-align:center;}
 #studentform tr th{ width:200px; border:1px solid black; height:50px; font-size:20px;}
 #studentform tr td{ width:200px; border:1px solid black; height:30px; }
 </style>
 <script>
-	
+	//初始化
 	window.onload=function(){
+		changeColor();
+		}
+		
+	//改变鼠标经过行的颜色
+	function changeColor(){
 		var trs = document.getElementsByTagName('tr');
 		for(var i=0;i<trs.length;i++){
 			trs[i].onmouseover = function(){
@@ -24,7 +29,7 @@ body{ }
 				}
 			}		
 		}
-		
+	
 	//删除的函数
 	function delect(obj){
 		var tr = obj.parentNode.parentNode;
@@ -45,6 +50,7 @@ body{ }
 		tr.appendChild(num);
 		tr.appendChild(del);
 		table.appendChild(tr);
+		changeColor();
 		}
 </script>
 
@@ -62,6 +68,7 @@ body{ }
                 	<td>001</td>
                 	<td><a href="javascript:;" onClick="delect(this)">删除</a></td>
                 </tr>
+                
             </table>
             <input type="button" value="添加" onClick="add()">
         </form>
