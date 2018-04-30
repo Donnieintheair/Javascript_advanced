@@ -5,75 +5,10 @@
 <title>practice10-tab</title>
 </head>
 <style>
-body{ }
-#studentformdiv{ margin:0 auto; width:604px;}
-#studentform{ border-collapse:collapse; width:604px; margin:20px auto 5px auto; text-align:center;}
-#studentform tr th{ width:200px; border:1px solid black; height:50px; font-size:20px;}
-#studentform tr td{ width:200px; border:1px solid black; height:30px; }
 </style>
 <script>
-	//初始化
-	window.onload=function(){
-		changeColor();
-		}
-		
-	//改变鼠标经过行的颜色
-	function changeColor(){
-		var trs = document.getElementsByTagName('tr');
-		for(var i=0;i<trs.length;i++){
-			trs[i].onmouseover = function(){
-				this.style.backgroundColor = '#f2f2f2';
-				}
-			trs[i].onmouseout = function(){
-				this.style.backgroundColor = '#fff';
-				}
-			}		
-		}
-	
-	//删除的函数
-	function delect(obj){
-		var tr = obj.parentNode.parentNode;
-		tr.parentNode.removeChild(tr);
-		}
-		
-	//添加一行的函数
-	function add(){
-		var table = document.getElementById("studentform");
-		var tr = document.createElement("tr");
-		var name = document.createElement("td");
-		name.innerHTML = prompt("请输入姓名：")
-		var num = document.createElement("td");
-		num.innerHTML = prompt("请输入学号：")
-		var del= document.createElement("td");
-		del.innerHTML = "<a href='javascript:;' onClick='delect(this)'>删除</a>";
-		tr.appendChild(name);
-		tr.appendChild(num);
-		tr.appendChild(del);
-		table.appendChild(tr);
-		changeColor();
-		}
 </script>
 
 <body>
-	<div id="studentformdiv">
-    	<form action="">
-        	<table id="studentform">
-            	<tr>
-                	<th>姓名</th>
-                	<th>学号</th>
-                	<th>操作</th>
-                </tr>
-                <tr>
-                	<td>张三</td>
-                	<td>001</td>
-                	<td><a href="javascript:;" onClick="delect(this)">删除</a></td>
-                </tr>
-                
-            </table>
-            
-            <input type="button" value="添加" onClick="add()">
-        </form>
-    </div>    
-
 </body>
 </html>
