@@ -16,7 +16,7 @@ a{ color:black; text-decoration:none}
 
 li往下突出的白色边框只会遮挡下方元素的边框，不会遮挡内容
 */
-#top li{ width:80px; border:1px solid red; margin-left:5px; display:inline-block; height:30px; text-align:center; line-height:30px;}
+#top li{ width:80px; border:1px solid #999; margin-left:5px; display:inline-block; height:30px; text-align:center; line-height:30px; border-bottom:none; }
 #top li.active{ border-top:2px solid #8b4513; border-bottom:2px solid white;}
 /*
 在这里，li是横向排列，active类的li的上边框是2px；会自动把同行的li的上边框撑大，即是li保持内容区域在同一线上。
@@ -34,11 +34,13 @@ li往下突出的白色边框只会遮挡下方元素的边框，不会遮挡内
 		var li = top.getElementsByTagName("li");
 		for(var i=0;i<li.length;i++){
 			li[i].index = i;
+			/*注意这个index要设置成为对应的li的属性*/
+			
 			li[i].onmouseover=function(){
-			/*	for(var z=0;z<li.length;z++){
+				for(var z=0;z<li.length;z++){
 					li[z].className="";
 					}
-				this.className = 'active';*/
+				this.className = 'active';
 				var div = document.getElementById("tab-list").getElementsByTagName("div");
 				for(var j=0;j<div.length;j++){
 					div[j].className = 'hide';
