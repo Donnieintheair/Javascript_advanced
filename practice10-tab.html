@@ -6,11 +6,16 @@
 </head>
 <style>
 *{ padding:0; margin:0;}
-#tab-list{ border:1px solid black; width:303px; height:180px;}
-#top li{ width:100px; border:1px solid black; border-width:0 1px 1px 0; display:inline-block; height:50px; text-align:center; line-height:50px;}
+ul{ list-style:none;}
+a{ color:black; text-decoration:none}
+#tab-list{ border:0; width:303px; height:180px; margin:20px}
+#top li{ width:80px; border:1px solid black; margin-left:5px; display:inline-block; height:30px; text-align:center; line-height:30px;}
+#tab-list>div{ border:1px solid black;}
+#tab-list div ul li{ font-size:16px; height:30px; line-height:30px; padding-left:10px}
 .hide{ display:none;}
 .show{ display:block;}
-a{ color:black;}
+#top li.active{ border-bottom:px solid #fff;}
+
 </style>
 <script>
 	window.onload=function(){
@@ -32,7 +37,7 @@ a{ color:black;}
 <body>
 	<div id="tab-list">
     	<ul id="top">
-    		<li>房产</li><li>家居</li><li>二手房</li>
+    		<li class="active">房产</li><li>家居</li><li>二手房</li>
     	</ul>
         
     	<div>
